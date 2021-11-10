@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
-//colours
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap'); //colours
 $icon-heading: rgb(51, 51, 51);
 $header-background-dark: rgb(53, 53, 53);
 $footer-heading: rgb(68, 68, 68);
@@ -11,18 +10,15 @@ $footer-link: rgb(100, 109, 117);
 $header-background-colortrans-1: rgba(0, 0, 0, .2);
 $header-background-colortrans-2: rgba(0,0, 0, .5);
 $text-intro: rgba(255, 255, 255, 0.7);
-$border: rgba(255, 255, 255, 0.08);
-//font-sizes
-$content: 16px;
-//font-weight
+$border: rgba(255, 255, 255, 0.08); //font-sizes
+$content: 16px; //font-weight
 $standard: normal;
-$emphasized: bold;
-// text-decoration
+$emphasized: bold; // text-decoration
 $no-hover: none;
 $hover: underline;
 
 * {
-  font-family: 'Mulish';
+  font-family: 'Mulish', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -61,16 +57,12 @@ body {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        width: 50%;
+        width: 55%;
       }
 
       li {
         width: 100%;
         list-style: none;
-        display: flex;
-        justify-content: space-around;
-        /*space-evenly anstatt margin?*/
-        color: $headings;
         font-size: 13px;
         font-weight: $emphasized;
       }
@@ -116,8 +108,6 @@ body {
         width: 26%;
         padding: 3%;
         background-color: $header-background-dark;
-        color: $header-info-text;
-        line-height: 24px;
         border-left: 1px solid $border;
 
         .hb-text {
@@ -126,7 +116,11 @@ body {
           h5 {
             padding-bottom: 24px;
             color: $headings;
-            line-height: 0;
+          }
+
+          p {
+            line-height: 24px;
+            color: $header-info-text;
           }
         }
       }
@@ -141,6 +135,7 @@ body {
       }
 
       a h6 {
+        display: inline;
         font-size: 14px;
         font-weight: $standard;
         letter-spacing: 1px;
@@ -207,35 +202,43 @@ body {
   }
 }
 @media only screen and (max-width: 950px) {
-  nav {
-    h2 {
-      margin-left: 0;
+  body {
+    header {
+      nav {
+        h2 {
+          margin-left: 0;
+        }
+      }
+
+      .hb-text p {
+        display: none;
+      }
+
     }
-  }
-
-  section {
-    width: 700px;
-  }
-
-  .hb-text p {
-    display: none;
+    section {
+      width: 700px;
+    }
   }
 }
 @media only screen and (max-width: 750px) {
-  nav {
-    background-color: $header-background-dark;
+  body {
+    header {
+      nav {
+        background-color: $header-background-dark;
 
-    h2 {
-      margin-left: 0;
+        h2 {
+          margin-left: 0;
+        }
+      }
+
+      .header-bottom-col {
+        visibility: hidden;
+      }
     }
-  }
 
-  .header-bottom-col {
-    visibility: hidden;
-  }
-
-  section {
-    width: 100%;
-    flex-direction: column;
+    section {
+      width: 100%;
+      flex-direction: column;
+    }
   }
 }

@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 * {
-  font-family: "Mulish";
+  font-family: "Mulish", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -38,15 +38,11 @@ body header nav ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 50%;
+  width: 55%;
 }
 body header nav li {
   width: 100%;
   list-style: none;
-  display: flex;
-  justify-content: space-around;
-  /*space-evenly anstatt margin?*/
-  color: #f7f7f7;
   font-size: 13px;
   font-weight: bold;
 }
@@ -85,8 +81,6 @@ body header #header-bottom .header-bottom-col {
   width: 26%;
   padding: 3%;
   background-color: #353535;
-  color: #bbbbbb;
-  line-height: 24px;
   border-left: 1px solid rgba(255, 255, 255, 0.08);
 }
 body header #header-bottom .header-bottom-col .hb-text {
@@ -95,7 +89,10 @@ body header #header-bottom .header-bottom-col .hb-text {
 body header #header-bottom .header-bottom-col .hb-text h5 {
   padding-bottom: 24px;
   color: #f7f7f7;
-  line-height: 0;
+}
+body header #header-bottom .header-bottom-col .hb-text p {
+  line-height: 24px;
+  color: #bbbbbb;
 }
 body header #main-title-con {
   width: 80%;
@@ -105,6 +102,7 @@ body header #main-title-con h6 {
   color: rgba(255, 255, 255, 0.7);
 }
 body header #main-title-con a h6 {
+  display: inline;
   font-size: 14px;
   font-weight: normal;
   letter-spacing: 1px;
@@ -160,31 +158,27 @@ body footer .footer-col {
 }
 
 @media only screen and (max-width: 950px) {
-  nav h2 {
+  body header nav h2 {
     margin-left: 0;
   }
-
-  section {
-    width: 700px;
-  }
-
-  .hb-text p {
+  body header .hb-text p {
     display: none;
+  }
+  body section {
+    width: 700px;
   }
 }
 @media only screen and (max-width: 750px) {
-  nav {
+  body header nav {
     background-color: #353535;
   }
-  nav h2 {
+  body header nav h2 {
     margin-left: 0;
   }
-
-  .header-bottom-col {
+  body header .header-bottom-col {
     visibility: hidden;
   }
-
-  section {
+  body section {
     width: 100%;
     flex-direction: column;
   }
