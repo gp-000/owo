@@ -2,6 +2,7 @@
 * {
   font-family: "Mulish";
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -9,8 +10,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
-header {
+body header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,25 +22,25 @@ header {
   background-size: cover;
   background-position: top;
 }
-header nav {
+body header nav {
   width: 100%;
   color: #f7f7f7;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
 }
-header nav h2 {
+body header nav h2 {
   font-size: 24px;
   font-weight: bolder;
   margin-left: 72px;
 }
-header nav ul {
+body header nav ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   width: 50%;
 }
-header nav li {
+body header nav li {
   width: 100%;
   list-style: none;
   display: flex;
@@ -50,34 +50,34 @@ header nav li {
   font-size: 13px;
   font-weight: bold;
 }
-header nav #nav-container {
+body header nav #nav-container {
   display: flex;
   justify-content: space-between;
 }
-header img {
+body header img {
   height: 45px;
   width: 45px;
 }
-header h1 {
+body header h1 {
   margin-top: 18px;
   margin-bottom: 24px;
   font-size: 40px;
   font-weight: bold;
   color: #f7f7f7;
 }
-header a {
+body header a {
   color: #f7f7f7;
   text-decoration: none;
 }
-header a:hover {
+body header a:hover {
   text-decoration: underline;
 }
-header #header-bottom {
+body header #header-bottom {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-header #header-bottom .header-bottom-col {
+body header #header-bottom .header-bottom-col {
   display: flex;
   align-items: flex-start;
   font-size: 16px;
@@ -89,75 +89,71 @@ header #header-bottom .header-bottom-col {
   line-height: 24px;
   border-left: 1px solid rgba(255, 255, 255, 0.08);
 }
-header #header-bottom .header-bottom-col .hb-text {
+body header #header-bottom .header-bottom-col .hb-text {
   padding-left: 24px;
 }
-header #header-bottom .header-bottom-col .hb-text h5 {
+body header #header-bottom .header-bottom-col .hb-text h5 {
   padding-bottom: 24px;
   color: #f7f7f7;
   line-height: 0;
 }
-header #main-title-con {
+body header #main-title-con {
   width: 80%;
 }
-
-#main-title-con h6 {
+body header #main-title-con h6 {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.7);
 }
-
-#main-title-con a h6 {
+body header #main-title-con a h6 {
   font-size: 14px;
   font-weight: normal;
   letter-spacing: 1px;
   color: #f7f7f7;
 }
-
-section {
+body section {
   width: 80%;
   padding-top: 48px;
   display: flex;
 }
-section .main-col {
+body section .main-col {
   margin-left: 50px;
   font-size: 16px;
   font-weight: normal;
   line-height: 30px;
   color: #999999;
 }
-section .main-col img {
+body section .main-col img {
   height: 32px;
   width: 32px;
 }
-section .main-col h5 {
+body section .main-col h5 {
   margin-top: 16px;
   margin-bottom: 8px;
   color: #333333;
 }
-
-footer {
+body footer {
   width: 100%;
   background-color: whitesmoke;
   display: flex;
   justify-content: space-around;
 }
-footer a {
+body footer a {
   font-size: 16px;
   color: #646d75;
   font-weight: normal;
   text-decoration: none;
 }
-footer a:hover {
+body footer a:hover {
   text-decoration: underline;
 }
-footer h5 {
+body footer h5 {
   font-size: 18px;
   font-weight: 600;
   color: #444444;
   padding-top: 40px;
   padding-bottom: 30px;
 }
-footer .footer-col {
+body footer .footer-col {
   display: flex;
   flex-direction: column;
   padding-bottom: 60px;
