@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap'); //colours
+$icon-heading: rgb(51, 51, 51);
+$header-background-dark: rgb(53, 53, 53);
+$footer-heading: rgb(68, 68, 68);
+$section-info-text: rgb(153, 153, 153);
+$header-info-text: rgb(187, 187, 187);
+$footer-background: rgb(245, 245, 245);
+$headings: rgb(247, 247, 247);
+$footer-link: rgb(100, 109, 117);
+$header-background-colortrans-1: rgba(0, 0, 0, .2);
+$header-background-colortrans-2: rgba(0,0, 0, .5);
+$text-intro: rgba(255, 255, 255, 0.7);
+$border: rgba(255, 255, 255, 0.08); //font-sizes
+$content: 16px; //font-weight
+$standard: normal;
+$emphasized: bold; // text-decoration
+$no-hover: none;
+$hover: underline;
+
+* {
+  font-family: 'Mulish', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 700px;
+    background-image: linear-gradient($header-background-colortrans-2, $header-background-colortrans-1), url("../images/delorean-palm-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    nav {
+      width: 100%;
+      color: $headings;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      h2 {
+        font-size: 24px;
+        font-weight: bolder;
+        margin-left: 72px;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 55%;
+      }
+
+      li {
+        width: 100%;
+        list-style: none;
+        font-size: 13px;
+        font-weight: $emphasized;
+      }
+
+      #nav-container {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    img {
+      height: 45px;
+      width: 45px;
+    }
+
+    h1 {
+      margin-top: 18px;
+      margin-bottom: 24px;
+      font-size: 40px;
+      font-weight: $emphasized;
+      color: $headings;
+    }
+
+    a {
+      color: $headings;
+      text-decoration: $no-hover;
+    }
+
+    a:hover {
+      text-decoration: $hover;
+    }
+
+    #header-bottom {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      .header-bottom-col {
+        display: flex;
+        align-items: flex-start;
+        font-size: $content;
+        font-weight: $standard;
+        width: 26%;
+        padding: 3%;
+        background-color: $header-background-dark;
+        border-left: 1px solid $border;
+
+        .hb-text {
+          padding-left: 24px;
+
+          h5 {
+            padding-bottom: 24px;
+            color: $headings;
+          }
+
+          p {
+            line-height: 24px;
+            color: $header-info-text;
+          }
+        }
+      }
+    }
+
+    #main-title-con {
+      width: 80%;
+
+      h6 {
+        font-size: 12px;
+        color: $text-intro;
+      }
+
+      a h6 {
+        display: inline;
+        font-size: 14px;
+        font-weight: $standard;
+        letter-spacing: 1px;
+        color: $headings;
+      }
+    }
+  }
+
+  section {
+    width: 80%;
+    padding-top: 48px;
+    display: flex;
+
+    .main-col {
+      margin-left: 50px;
+      font-size: $content;
+      font-weight: $standard;
+      line-height: 30px;
+      color: $section-info-text;
+
+      img {
+        height: 32px;
+        width: 32px;
+      }
+
+      h5 {
+        margin-top: 16px;
+        margin-bottom: 8px;
+        color: $icon-heading;
+      }
+    }
+  }
+
+  footer {
+    width: 100%;
+    background-color: $footer-background;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      font-size: $content;
+      color: $footer-link;
+      font-weight: $standard;
+      text-decoration: $no-hover;
+    }
+
+    a:hover {
+      text-decoration: $hover;
+    }
+
+    h5 {
+      font-size: 18px;
+      font-weight: 600;
+      color: $footer-heading;
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+
+    .footer-col {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 60px;
+    }
+  }
+}
+@media only screen and (max-width: 950px) {
+  body {
+    header {
+      nav {
+        h2 {
+          margin-left: 0;
+        }
+      }
+
+      .hb-text p {
+        display: none;
+      }
+
+    }
+    section {
+      width: 700px;
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  body {
+    header {
+      nav {
+        background-color: $header-background-dark;
+
+        h2 {
+          margin-left: 0;
+        }
+      }
+
+      .header-bottom-col {
+        visibility: hidden;
+      }
+    }
+
+    section {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+}
